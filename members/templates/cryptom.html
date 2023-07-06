@@ -1,0 +1,80 @@
+{% extends "master.html" %}
+
+{% block title %}
+   Crypto Currency
+{% endblock %}
+{% block navbar %}
+<div class="w3-bar w3-teal w3-xlarge w3-margin-bottom" style="height:70px; padding-top:5px;">
+  <a href="#" class="w3-bar-item w3-button w3-margin-left">Home</a>
+  <a href="#" class="w3-bar-item w3-button w3-right w3-margin-right">Link 1</a>
+  <a href="#" class="w3-bar-item w3-button w3-right w3-margin-right">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button w3-right w3-margin-right">Link 3</a>
+</div>
+{% endblock %}
+{% block content %}
+
+<div class="w3-row">
+    <h1 class="w3-row w3-center">Binance Crypto Currency Exchange</h1>
+    <div class="w3-row w3-border-top w3-responsive">
+      <table class="w3-table-all w3-bordered w3-striped w3-border-bottom w3-hoverable" style="color:#000;">
+          <tr class="w3-green">
+            <th>Id</th>
+            <th>symbol</th>
+            <th>priceChange</th>
+            <th>priceChangePercent</th>
+            <th>weightedAvgPrice</th>
+            <th>prevClosePrice</th>
+            <th>lastPrice</th>
+            <th>lastQty</th>
+            <th>bidPrice</th>
+            <th>bidQty</th>
+            <th>askPrice</th>
+            <th>askQty</th>
+            <th>openPrice</th>
+            <th>highPrice</th>
+            <th>lowPrice</th>
+            <th>volume</th>
+            <th>quoteVolume</th>
+            <th>openTime</th>
+            <th>closeTime</th>
+            <th>firstId</th>
+            <th>lastId</th>
+            <th>count</th>
+          </tr>
+      <tbody>
+        {% for x in cryptoGal %}
+          <tr>
+              <td>{{ x.id}}</td>
+              <td><a href="/members/getcoinsdetails/{{ x.id }}">{{ x.symbol}}</a></td>
+              <td>{{ x.priceChange}}</td>
+              <td>{{ x.priceChangePercent}}</td>
+              <td>{{ x.weightedAvgPrice}}</td>
+              <td>{{ x.prevClosePrice}}</td>
+              <td>{{ x.lastPrice}}</td>
+              <td>{{ x.lastQty}}</td>
+              <td>{{ x.bidPrice}}</td>
+              <td>{{ x.bidQty}}</td>
+              <td>{{ x.askPrice}}</td>
+              <td>{{ x.askQty}}</td>
+              <td>{{ x.openPrice}}</td>
+              <td>{{ x.highPrice}}</td>
+              <td>{{ x.lowPrice}}</td>
+              <td>{{ x.volume}}</td>
+              <td>{{ x.quoteVolume}}</td>
+              <td>{{ x.openTime}}</td>
+              <td>{{ x.closeTime}}</td>
+              <td>{{ x.firstId}}</td>
+              <td>{{ x.lastId}}</td>
+              <td>{{ x.count}}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+  </div>
+  {% endblock %}
+</div>
+
+
+
+
+  

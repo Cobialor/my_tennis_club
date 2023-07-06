@@ -1,0 +1,128 @@
+{% extends "master.html" %}
+
+{% block title %}
+details about {{ cryptoGal.symbol }} 
+ {% endblock %}
+<!--navigation bar-->
+{% block navbar %}
+<div class="w3-bar w3-teal w3-xlarge" style="height:70px; padding-top:5px;">
+  <a href="#" class="w3-bar-item w3-button w3-margin-left">Home</a>
+  <a href="#" class="w3-bar-item w3-button w3-right w3-margin-right">Link 1</a>
+  <a href="#" class="w3-bar-item w3-button w3-right w3-margin-right">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button w3-right w3-margin-right">Link 3</a>
+</div>
+{% endblock %}
+{% block content %}
+<div class="w3-row" style="width:100%;">
+    <div class="w3-row">
+      <div class="w3-col l9 s3 w3-container">
+      </div>
+      <div class="w3-col w3-border w3-center l2 s5">
+        <p>Back to <a href="/members/cryptom">CryptoData</a></p>
+      </div>
+    </div>
+  </div>
+
+<div class="w3-row w3-center">
+    <h1>Details <b><span style="font-size:20px;">of</span>&nbsp;&nbsp;<span style="color:green;">{{ cryptoGal.symbol }}</span></b> </h1>
+    <div class="w3-row">
+        <div class="w3-col l4 m2 w3-container">
+        </div>
+        <div class="w3-col  l4 m9 s12 w3-padding">
+            <div class="w3-responsive w3-padding-16">
+                    <table class="w3-table-all w3-center w3-bordered w3-striped w3-border w3-hoverable" style=" color:#000;">
+                    <tr class="w3-blue">
+                        <th>Fields</th>
+                        <th>Values</th>
+                    </tr>
+                    <tr>
+                        <th>Id</th>
+                        <th>{{ cryptoGal.id }}</th>
+                    </tr>
+                        <tr>
+                            <th>symbol</th>
+                            <th>{{ cryptoGal.symbol }}</th></tr>
+                        <tr>
+                            <th>priceChange</th>
+                            <th>{{ cryptoGal.priceChange }}</th>
+                    </tr>
+                        <tr>
+                            <th>priceChangePercent</th>
+                            <th>{{ cryptoGal.priceChangePercent }}</th>
+                    </tr>
+                        <tr>
+                            <th>weightedAvgPrice</th>
+                            <th>{{ cryptoGal.weightedAvgPrice }}</th>
+                        </tr>
+                        <tr>
+                            <th>prevClosePrice</th>
+                            <th>{{ cryptoGal.prevClosePrice }}</th>
+                        </tr>
+                        <tr><th>lastPrice</th>
+                        <th>{{ cryptoGal.lastPrice }}</th>
+                        </tr>
+                        <tr>
+                            <th>lastQty</th>
+                            <th>{{ cryptoGal.lastQty }}</th>
+                        </tr>
+                        <tr>
+                            <th>bidPrice</th>
+                            <th>{{ cryptoGal.bidPrice }}</th>
+                        </tr>
+                        <tr>
+                            <th>bidQty</th>
+                            <th>{{ cryptoGal.bidQty }}</th>
+                        </tr>
+                        <tr>
+                            <th>askPrice</th>
+                            <th>{{ cryptoGal.askPrice }}</th>
+                    </tr>
+                        <tr>
+                            <th>askQty</th>
+                            <th>{{ cryptoGal.askQty }}</th></tr>
+                        <tr>
+                            <th>openPrice</th>
+                            <th>{{ cryptoGal.openPrice }}</th>
+                        </tr>
+                            <tr><th>highPrice</th>
+                            <th>{{ cryptoGal.highPrice }}</th>
+                        </tr>
+                        <tr>
+                            <th>lowPrice</th>
+                            <th>{{ cryptoGal.lowPrice }}</th>
+                        </tr>
+                        <tr>
+                            <th>volume</th>
+                            <th>{{ cryptoGal.volume }}</th>
+                        </tr>
+                        <tr>
+                            <th>quoteVolume</th>
+                            <th>{{ cryptoGal.quoteVolume }}</th>
+                        </tr>
+                        <tr>
+                            <th>openTime</th>
+                            <th>{{ cryptoGal.openTime }}</th>
+                    </tr>
+                        <tr>
+                            <th>closeTime</th>
+                            <th>{{ cryptoGal.closeTime }}</th>
+                        </tr>
+                            <tr><th>firstId</th>
+                            <th>{{ cryptoGal.firstId }}</th>
+                        </tr>
+                        <tr>
+                            <th>lastId</th>
+                            <th>{{ cryptoGal.lastId }}</th>
+                        </tr>
+                        <tr>
+                            <th>count</th>
+                            <th>{{ cryptoGal.count }}</th>
+                        </tr>
+                </table>
+            </div> 
+        </div>
+    </div>
+      
+</div>
+       
+{% endblock %} 

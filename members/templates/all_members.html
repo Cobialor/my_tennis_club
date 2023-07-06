@@ -1,0 +1,41 @@
+{% extends "master.html" %}<!-- link between all members template amd the masters template -->
+<!-- title of the members page -->
+{% block title %}
+  All members
+{% endblock %}
+
+<!--navigation bar-->
+{% block navbar %}
+<div class="w3-bar w3-teal w3-xlarge" style="height:70px; padding-top:5px;">
+  <a href="#" class="w3-bar-item w3-button w3-margin-left">Home</a>
+  <a href="#" class="w3-bar-item w3-button w3-right w3-margin-right">Link 1</a>
+  <a href="#" class="w3-bar-item w3-button w3-right w3-margin-right">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button w3-right w3-margin-right">Link 3</a>
+</div>
+{% endblock %}
+
+<!-- body of details template -->
+{% block content %}
+<div class="w3-row w3-margin-left" style="height:440px;">
+  <!-- first column in the row -->
+  <div class="w3-col w3-container w3-padding" style="width:10px;">
+  </div>
+  <!-- second column in the row -->
+  <div class="w3-col w3-container l3">
+    <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Members</h1>
+    <!-- begining of for loop -->
+    {% for x in mymembers %}
+      <div class="w3-col w3-border">
+          <h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ x.id }}.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="details/{{ x.id }}">{{ x.firstname }} {{ x.lastname }}</a></h6>
+      </div>
+      <!-- end of for loop -->
+    {% endfor %}
+  </div>
+</div>
+<!-- end of the body of details template -->
+{% endblock %}
+
+
+
+  

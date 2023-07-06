@@ -1,0 +1,8 @@
+{% block content %}
+    <div class="w3-container w3-margin-top">
+        <form method="GET" action="{% url 'searchMember' %}">
+            <input type = "text" name="firstname" />
+            <input type = "submit"/>
+        </form>
+    </div>        
+{% endblock %}

@@ -1,0 +1,15 @@
+
+@media only screen and (max-width: 800px) {
+  div h1 p{
+    font-size : 0.5em;
+
+  }
+ .w3-col .emptDive{
+    width: 50%;
+  }
+  
+  .w3-col .members-details{
+    width:100%;
+  }
+  
+}
